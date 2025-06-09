@@ -1,0 +1,13 @@
+#config del server
+spring:
+  profiles:
+    active: native
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native: #asi buscara las configuracioens en /configurations,tambn puede buscarlas en un repo remoto o lo que sea
+          search-locations: classpath:/configurations
+server:
+  port: 8888

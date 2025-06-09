@@ -1,0 +1,14 @@
+# si esta config la escribimos primero en el application.yml del discovery
+# podemos usar el autocompletado
+#configuramos el cliente eureka
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}/${server.port}/eureka/
+
+server:
+  port: 8761
